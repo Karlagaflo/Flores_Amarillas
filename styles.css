@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #98fb98;
+    font-size: 50px;
+    text-align: center;
+}
+
+#campo {
+    width: 100vw;
+    height: 100vh;
+    background-color: #98fb98; /* Color del pasto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necesario para posicionar los elementos dentro */
+    background-image: url('https://media.ambito.com/p/c7568b1b86f3d411ee466c73106d5aaf/adjuntos/239/imagenes/041/243/0041243282/375x211/smart/imagepng.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#ramo {
+    display: flex;
+    align-items: center;
+    position: relative; /* Permite que los hijos sean posicionados de forma relativa */
+}
+
+.triangulo {
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.izquierdo {
+    border-width: 100px 400px 100px 0; /* Triángulo grande izquierdo */
+    border-bottom-left-radius: 300px;
+    border-top-left-radius: 300px;
+    border-color: transparent #924e92 transparent #800080;
+    background: linear-gradient(to right, #4E2394, #DBC9F5); width: 100%; height: 200px;
+}
+
+.derecho {
+    border-width: 120px 0 120px 500px; /* Triángulo pequeño derecho */
+    border-color: transparent transparent transparent #924e92;
+    margin-left: -500px;
+    position: relative;
+}
+
+/* Frase */
+#frase {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#contenedor-donas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; 
+    margin-left: 480px;
+    top: 50%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrarlo correctamente */
+    z-index: 2; /* Asegura que las donas estén por encima del círculo */
+}
+
+#circulo {
+    width: 200px; /* Ancho del círculo */
+    height: 400px; /* Ajusta la altura para que sea un círculo */
+    background-color: #d365dd; /* Color del círculo */
+    border-radius: 50%; /* Para hacer que sea un círculo */
+    position: absolute; /* Asegura que el círculo se posicione correctamente */
+    top: calc(50% + 50px); /* Colocar debajo de las donas */
+    top: 50%;
+    left: 68%;
+    transform: translate(-50%, -50%); /* Para centrarlo horizontal y verticalmente */
+    z-index: 1; /* Asegura que el círculo esté detrás de las donas */
+}
+
+#contenedor-donas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; 
+    margin-left: 420px; /* Ajusta según sea necesario */
+    top: 50%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrarlo correctamente */
+}
+
+/* Primera columna de donas */
+#fila-donas-izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Aparecerá por encima de la segunda columna */
+
+}
+
+/* Columna central de donas */
+#fila-donas-central {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Aparecerá por encima de la columna derecha */
+}
+
+/* Segunda columna de donas */
+#fila-donas-derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Aparecerá detrás de las otras columnas */
+}
+
+
+.dona {
+    width: 80px;
+    height: 83px;
+    background-color: #ffeb3b; /* Color de la dona */
+    border: 3px solid #000;
+    border-radius: 50%;
+    margin: -5px;
+    margin-left: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg); /* Rotación de 90 grados */
+}
+
+.dona::after {
+    content: '|‿|'; /* Carita en cada dona */
+    font-size: 20px;
+}
